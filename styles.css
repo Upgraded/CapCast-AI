@@ -1,1 +1,50 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fb;
+  color: #222;
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.input-section input {
+  padding: 10px;
+  width: 70%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-section button {
+  padding: 10px 16px;
+  margin-left: 8px;
+  font-size: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.output-section {
+  margin-top: 30px;
+  font-size: 1rem;
+  background: #e0f2fe;
+  padding: 12px 18px;
+  border-radius: 6px;
+  color: #1e3a8a;
+}
 
