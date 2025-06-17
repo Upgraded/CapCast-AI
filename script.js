@@ -1,21 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const askButton = document.querySelector("button");
-  const inputField = document.querySelector("input");
-  const output = document.querySelector(".output-section span");
+document.getElementById("askButton").addEventListener("click", function () {
+  const input = document.getElementById("questionInput").value.toLowerCase();
+  const responseDiv = document.getElementById("response");
 
-  const predictions = [
-    "Based on trends and defense rating, the Pacers are likely to cover. Confidence: 68%.",
-    "Due to recent injuries and matchup data, OKC is slightly favored. Confidence: 72%.",
-    "Capcast model suggests it's a toss-up — avoid this bet. Confidence: 53%.",
-    "Data favors OKC on the road tonight. Confidence: 77%.",
-    "Historical matchups point toward the under. Confidence: 65%.",
-    "Capcast projects a blowout — Pacers dominate. Confidence: 81%."
-  ];
+  let response = "Sorry, I need more context to help with that one.";
 
-  askButton.disabled = false;
+  if (input.includes("okc") && input.includes("pacers")) {
+    response = "CapCast likes OKC tonight — 63% confidence. Indiana's defense has struggled vs fast-paced teams.";
+  } else if (input.includes("lakers") && input.includes("celtics")) {
+    response = "CapCast is riding with the Celtics — 58% confidence. Better road net rating, fewer turnovers.";
+  } else if (input.includes("heat") && input.includes("knicks")) {
+    response = "Knicks are the lean — 54% confidence. Miami's backcourt is banged up.";
+  }
 
-  askButton.addEventListener("click", () => {
-    const random = Math.floor(Math.random() * predictions.length);
-    output.textContent = predictions[random];
-  });
+  responseDiv.innerHTML = `<p>${response}</p>`;
 });
