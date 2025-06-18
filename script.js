@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     askButton.addEventListener('click', () => {
       const question = questionInput.value.trim();
 
-      if (question.length > 0) {
-        // Placeholder output
-        outputSection.innerHTML = ""; // Clear old response
-outputSection.innerHTML = `<p><strong>Capcast:</strong> Analyzing your query: "${question}". Confidence: <span class="confidence">TBD%</span>.</p>`;
+      outputSection.innerHTML = ""; // Clear any previous result
 
-        outputSection.innerHTML = '<p>Please enter a valid question.</p>';
+if (question.length > 0) {
+  outputSection.innerHTML = `<p><strong>Capcast:</strong> Analyzing your query: "${question}". Confidence: <span class="confidence">TBD%</span>.</p>`;
+} else {
+  outputSection.innerHTML = `<p class="error">Please enter a valid question.</p>`;
+}
+
       }
     });
   }
