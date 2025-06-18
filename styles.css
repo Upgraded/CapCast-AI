@@ -8,16 +8,18 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #111827;
-  margin-bottom: 8px;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+  color: #1a1a1a;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  color: #4b5563;
-  margin-bottom: 24px;
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 2em;
 }
+
 
 .input-section input {
   padding: 10px;
