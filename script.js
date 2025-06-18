@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (question.length > 0) {
         // Placeholder output
-        outputSection.innerHTML = `<p><strong>Capcast:</strong> Analyzing your query: "${question}". Confidence: <span class="confidence">TBD%</span>.</p>`;
-      } else {
+        outputSection.innerHTML = ""; // Clear old response
+outputSection.innerHTML = `<p><strong>Capcast:</strong> Analyzing your query: "${question}". Confidence: <span class="confidence">TBD%</span>.</p>`;
+
         outputSection.innerHTML = '<p>Please enter a valid question.</p>';
       }
     });
